@@ -1,0 +1,54 @@
+.module {
+	position: relative;
+	padding: 1em;
+
+	border-radius: 1em;
+	border: 1px solid #999;
+	background: #ccc;
+
+	.title {
+		margin: -1em -1em 0;
+		padding: 0.5em 1em;
+
+		border-bottom: 1px solid #999;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0.5em 1em;
+
+		background: #999;
+		border-radius: 0 0 1em 1em;
+	}
+
+	.content {
+
+	}
+
+	.title ~ .content {
+		margin-top: 1em;
+	}
+
+	.footer ~ .content {
+		margin-bottom: 2em;
+	}
+
+	+ .module {
+		margin-top: 1em;
+	}
+
+	ul, ol {
+		padding-left: 1em;
+	}
+}
+
+
+// Logo
+.logo {
+	img { width: 100%; }
+}

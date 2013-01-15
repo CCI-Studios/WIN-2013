@@ -1,0 +1,37 @@
+nav ul {
+
+	li {
+		position: relative;
+		display: inline-block;
+		margin-left: 1em;
+	}
+
+	a {
+		display: block;
+	}
+
+	ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
+		width: 10em;
+		padding: 0.5em 1em;
+
+		background: #fff;
+		border: 1px solid #999;
+
+		li {
+			margin: 0;
+		}
+	}
+
+	li:hover ul {
+		display: block;
+	}
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}

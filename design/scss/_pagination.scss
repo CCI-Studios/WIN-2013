@@ -1,0 +1,21 @@
+.pagination {
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		padding: 0 0.5em;
+		margin: 0 0.5em;
+
+		border: 1px solid #999;
+	}
+}
