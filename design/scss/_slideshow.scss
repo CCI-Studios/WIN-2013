@@ -1,10 +1,16 @@
+$slideshow-padding: 0.2em;
+
 .slideshow {
 	.main {
 		display: block;
+		padding: $slideshow-padding;
+
+		background: #fff;
+		box-shadow: 0 0 4px rgba(0,0,0, 0.4);
 	}
 
 	ul {
-		margin: 0.25em 0 0 -5px;
+		margin: ($slideshow-padding*3) 0 0;
 		padding: 0;
 
 		text-align: center;
@@ -12,7 +18,11 @@
 
 	li {
 		display: inline-block;
-		padding: 0 5px;
+		margin: 0 $slideshow-padding;
+		padding: $slideshow-padding;
+
+		background: #fff;
+		box-shadow: 0 0 4px rgba(0,0,0, 0.4);
 	}
 
 	li img {

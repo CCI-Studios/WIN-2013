@@ -1,18 +1,21 @@
+@import "variables";
+
+$module-padding: 1em;
+
 .module {
 	position: relative;
-	padding: 1em;
+	padding: $module-padding;
 
-	border-radius: 1em;
-	border: 1px solid #999;
-	background: #ccc;
+	box-shadow: 0 0 4px rgba(0,0,0, 0.4);
+	background: #fff;
 
 	.title {
-		margin: -1em -1em 0;
-		padding: 0.5em 1em;
+		padding: 0 0 $module-padding/2;
 
-		border-bottom: 1px solid #999;
+		color: $dark-pink;
+		border-bottom: 1px solid $dark-pink;
+		font-family: 'Futura-CondensedMedium';
 		font-weight: bold;
-		text-align: center;
 	}
 
 	.footer {
@@ -20,10 +23,9 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 0.5em 1em;
+		padding: $module-padding/2 $module-padding;
 
-		background: #999;
-		border-radius: 0 0 1em 1em;
+		background: $pink-2;
 	}
 
 	.content {
@@ -31,24 +33,31 @@
 	}
 
 	.title ~ .content {
-		margin-top: 1em;
+		margin-top: $module-padding;
 	}
 
 	.footer ~ .content {
-		margin-bottom: 2em;
+		margin-bottom: $module-padding*2;
 	}
 
 	+ .module {
-		margin-top: 1em;
+		margin-top: $module-padding;
 	}
 
 	ul, ol {
-		padding-left: 1em;
+		padding-left: $module-padding;
 	}
+}
+
+.module-plain {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	background: none;
 }
 
 
 // Logo
 .logo {
-	img { width: 100%; }
+	float: left;
 }

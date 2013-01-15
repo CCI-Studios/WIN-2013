@@ -1,0 +1,54 @@
+@import "variables";
+
+body {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	color: $dark-grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em;
+}
+
+h1 {
+	font-size: 2.25em;
+	font-weight: bold;
+	color: $dark-pink;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: light;
+	color: $dark-pink;
+}
+
+h3 {
+	font-size: 1.125em;
+	font-weight: normal;
+}
+
+a {
+	color: $dark-pink;
+
+	&:hover {
+		color: $pink-1;
+	}
+}
+
+p {
+	margin: 1em 0 0;
+}
+
+
+.read-more {
+	display: inline-block;
+	padding-right: 35px;
+	line-height: 28px;
+
+	background: url(../images/arrow-normal.png) right center no-repeat;
+	text-decoration: none;
+
+	&:hover { background-image: url(../images/arrow-over.png); }
+}
+
+.text-center { text-align: center; }
