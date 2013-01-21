@@ -40,7 +40,8 @@ body {
 }
 
 #body {
-	padding: 1em 0;
-
-	> .container { background: url(../images/bg-content.png) top right no-repeat; }
+	> .container {
+		padding: 1em 10px;
+		background: url(../images/bg-content.png) top right no-repeat;
+	}
 }
