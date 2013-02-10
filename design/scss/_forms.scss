@@ -21,3 +21,29 @@ textarea {
 		box-shadow: 0 0 4px $dark-pink;
 	}
 }
+
+input[type=text], input[type=password], input[type=search] {
+	width: 100%;
+	margin-bottom: 4px;
+	border-radius: 0.5em;
+
+	&.inline {
+		width: auto;
+	}
+}
+
+
+
+input[type=submit], input[type=reset], button {
+	border: none;
+	background: $dark-pink;
+	padding: 0.5em 1em;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 0.5em;
+
+	&:hover {
+		background: $pink-1;
+		cursor: pointer;
+	}
+}

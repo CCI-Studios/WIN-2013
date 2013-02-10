@@ -6,10 +6,11 @@ $module-padding: 1em;
 	position: relative;
 	padding: $module-padding;
 
+	border-radius: 0.5em;
 	box-shadow: 0 0 4px rgba(0,0,0, 0.4);
 	background: #fff;
 
-	.title {
+	> .title {
 		padding: 0 0 $module-padding/2;
 
 		color: $dark-pink;
@@ -19,13 +20,14 @@ $module-padding: 1em;
 		font-size: 24px;
 	}
 
-	.footer {
+	> .footer {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		padding: $module-padding/2 $module-padding;
 
+		border-radius: 0 0 0.5em 0.5em;
 		background: $pink-2;
 	}
 
@@ -45,8 +47,8 @@ $module-padding: 1em;
 		margin-top: $module-padding;
 	}
 
-	ul, ol {
-		padding-left: $module-padding;
+	.host {
+		color: $pink-1;
 	}
 }
 
@@ -60,7 +62,11 @@ $module-padding: 1em;
 
 // Logo
 .logo {
-	float: left;
+	text-align: center;
+
+	@media screen and (min-width: 860px) {
+		float: left;
+	}
 }
 
 .module.module-media {

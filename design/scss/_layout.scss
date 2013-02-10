@@ -1,16 +1,26 @@
 @import "variables";
 
 body {
-	background: url(../images/bg-pattern.png);
+	background: $dark-pink;
 }
 
 .container {
-	width: 960px;
 	margin: 0 auto;
 	padding: 0 10px;
+
+	@media screen and (min-width: 768px) {
+		max-width: 960px;
+	}
 }
 
 .clear { clear: both; }
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; /* For IE 6/7 (trigger hasLayout) */ }
 
 [role=banner] {
 	padding: 1em 0;
@@ -20,28 +30,56 @@ body {
 	box-shadow: 0 0 10px rgba(0,0,0, 0.4);
 }
 
+#wrapper {
+	background:
+		url(../images/bg-content.png) right 0 no-repeat, // FIX THE LOCATION
+		url(../images/bg-pattern.png);
+}
+
 [role=contentinfo] {
 	text-align: center;
 	background: $dark-pink;
 	box-shadow: 0 0 10px rgba(0,0,0, 0.4);
 
 	color: #fff;
+
+	a {
+		color: #fff;
+	}
 }
 
 [role=main] {
+	margin: 0 0 1em;
 	padding: 1em;
 
+	border-radius: 0.5em;
 	background: #fff;
 	box-shadow: 0 0 4px rgba(0,0,0, 0.4);
 }
 
-#masthead {
+.menu {
+
+
+	@media screen and (min-width: 860px) {
+		margin-top: 24px;
+		float: right;
+	}
+}
+
+#sidebar {
 	margin: 1em 0 0;
+
+	@media screen and (min-width: 800px) {
+		margin: 0;
+	}
+}
+
+#masthead {
+	padding: 1em 0 0;
 }
 
 #body {
 	> .container {
 		padding: 1em 10px;
-		background: url(../images/bg-content.png) top right no-repeat;
 	}
 }

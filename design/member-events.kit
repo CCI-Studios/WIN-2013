@@ -3,6 +3,7 @@
 <head>
 	<title>WIN</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -17,47 +18,58 @@
 		</div>
 	</header>
 
-	<div id="body">
-		<div class="container">
-			<div class="grid-container">
-				<aside class="grid-1-4">
-					<!-- @import partials/win-event -->
-					<!-- @import partials/login -->
-					<!--<!-- @import partials/user -->
-					<!-- @import partials/social -->
-				</aside>
+	<div id="wrapper">
+		<div id="masthead">
+			<div class="container">
+				<!-- @import partials/slideshow -->
+			</div>
+		</div>
 
-				<div class="grid-3-4">
-					<div role="main">
-						<h1>Member Events</h1>
-						<ul>
-							<li><a href="member-event.html">Event Title - Jan 20, 2013</a></li>
-							<li><a href="member-event.html">Event 2</a></li>
-							<li><a href="member-event.html">Event 3</a></li>
-							<li><a href="member-event.html">Event 4</a></li>
-							<li><a href="member-event.html">Event 5</a></li>
-							<li><a href="member-event.html">Event 6</a></li>
-							<li><a href="member-event.html">Event 7</a></li>
-							<li><a href="member-event.html">Event 8</a></li>
-							<li><a href="member-event.html">Event 9</a></li>
-							<li><a href="member-event.html">Event 10</a></li>
-						</ul>
 
-						<div class="pagination">
+		<div id="body">
+			<div class="container">
+				<div class="grid-container">
+
+					<div class="grid-7-10">
+						<div role="main">
+							<h1>Member Events</h1>
 							<ul>
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
+								<li><a href="member-event.html">Event Title - Jan 20, 2013</a></li>
+								<li><a href="member-event.html">Event 2</a></li>
+								<li><a href="member-event.html">Event 3</a></li>
+								<li><a href="member-event.html">Event 4</a></li>
+								<li><a href="member-event.html">Event 5</a></li>
+								<li><a href="member-event.html">Event 6</a></li>
+								<li><a href="member-event.html">Event 7</a></li>
+								<li><a href="member-event.html">Event 8</a></li>
+								<li><a href="member-event.html">Event 9</a></li>
+								<li><a href="member-event.html">Event 10</a></li>
 							</ul>
+
+							<div class="pagination">
+								<ul>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="region region-bottom">
+							<!-- @import partials/member-events -->
 						</div>
 					</div>
+
+					<aside id="sidebar" class="grid-3-10">
+						<!-- @import partials/win-event -->
+						<!-- @import partials/login -->
+						<!--<!-- @import partials/user -->
+					</aside>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	</div>
 
 
@@ -72,3 +84,4 @@
 
 </body>
 </html>
+

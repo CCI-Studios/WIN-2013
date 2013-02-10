@@ -11,9 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	padding-bottom: 0.25em;
+
 	font-size: 2.25em;
 	font-weight: bold;
 	color: $dark-pink;
+	border-bottom: 1px solid $dark-pink;
 
 	small {
 		color: $light-grey;
@@ -46,9 +49,10 @@ p {
 
 
 .read-more {
-	display: inline-block;
+	display: block;
 	padding-right: 35px;
 	line-height: 28px;
+	text-align: right;
 
 	background: url(../images/arrow-normal.png) right center no-repeat;
 	text-decoration: none;

@@ -1,31 +1,65 @@
+@import "variables";
 $slideshow-padding: 0.2em;
 
+
+
 .slideshow {
+	position: relative;
+
 	.main {
 		display: block;
 		padding: $slideshow-padding;
 
+		border-radius: 0.5em;
 		background: #fff;
 		box-shadow: 0 0 4px rgba(0,0,0, 0.4);
 	}
 
 	ul {
-		margin: ($slideshow-padding*3) 0 0;
+		margin: 0.5em 0 0;
 		padding: 0;
-
 		text-align: center;
 	}
 
 	li {
 		display: inline-block;
-		margin: 0 $slideshow-padding;
+		margin: 0 0.5em;
 		padding: $slideshow-padding;
 
 		background: #fff;
+		border-radius: 60px;
 		box-shadow: 0 0 4px rgba(0,0,0, 0.4);
+
+		&.active {
+			box-shadow: 0 0 10px $dark-pink;
+		}
 	}
 
 	li img {
 		display: block;
+		border-radius: 52px;
+	}
+
+
+	@media screen and (min-width: 930px) {
+		margin-right: 70px;
+
+		ul {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 65px;
+			margin-left: 10px;
+		}
+
+		li {
+			display: block;
+			margin: 0 0 0.5em;
+		}
+
+
 	}
 }
+
+
+
