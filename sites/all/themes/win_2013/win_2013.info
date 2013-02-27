@@ -1,0 +1,17 @@
+name = WIN 2013
+description = Win theme by CCI Studios
+core = 7.x
+
+stylesheets[all][] = css/theme.css
+
+regions[header] = Header
+
+regions[highlighted] = Highlighted
+
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Top sidebar
+regions[sidebar_second] = Bottom sidebar
+
+regions[bottom] = Bottom
+regions[footer] = Footer

@@ -1,0 +1,46 @@
+@import "variables";
+
+.view-slideshow { position: relative; }
+
+.views_slideshow_main {
+	margin-right: 75px;
+	padding: 3px;
+
+	background: white;
+	box-shadow: 0 0 4px $shadow;
+	border-radius: 8px;
+
+	img {
+		display: block;
+		border-radius: 6px;
+	}
+}
+
+.views-slideshow-controls-bottom {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -146px;
+}
+
+.views-slideshow-pager-field-item {
+	width: 65px;
+	height: 65px;
+	overflow: hidden;
+	margin-bottom: 0.5em;
+	padding: 3px;
+
+	box-shadow: 0 0 4px $shadow;
+	border-radius: 50%;
+
+	-webkit-transition: box-shadow 2s linear;
+
+	img {
+		display: block;
+		border-radius: 50%;
+	}
+
+	&.active {
+		box-shadow: 0 0 8px $pink-hot;
+	}
+}

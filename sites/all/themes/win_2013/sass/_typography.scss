@@ -1,0 +1,35 @@
+@import "variables";
+
+body {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	color: #4c4c4c;
+}
+
+.title {
+	padding-bottom: 0.25em;
+
+	border-bottom: 1px solid $pink-hot;
+	font-size: 2.25em;
+	font-weight: bold;
+	color: $pink-hot;
+}
+
+a {
+	color: $pink-hot;
+
+	&:hover { color: $pink-medium; }
+	&:visited { color: $pink-hot; }
+}
+
+.read-more {
+	display: block;
+	padding-right: 35px;
+	line-height: 28px;
+	text-align: right;
+
+	background: url(../images/arrow-normal.png) right center no-repeat;
+	text-decoration: none;
+
+	&:hover { background-image: url(../images/arrow-over.png); }
+}
