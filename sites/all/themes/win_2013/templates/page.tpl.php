@@ -107,7 +107,7 @@ $sidebar_bottom = render($page['sidebar_second']);
 		</div>
 
 		<?php if ($sidebar_top || $sidebar_bottom): ?>
-			<aside class="col-3-10">
+			<aside class="col-3-10 sidebars">
 				<?php print render($page['sidebar_first']) ?>
 				<?php print render($page['sidebar_second']) ?>
 			</aside>
