@@ -22,7 +22,8 @@ ul.menu { // added tag, thanks drupal
 		background: none top no-repeat;
 		color: $pink-hot;
 
-		&.active { color: $pink-medium; }
+		&.active, &.active-trail { color: $pink-medium; }
+
 	}
 
 	li:hover {
@@ -74,16 +75,15 @@ ul.menu { // added tag, thanks drupal
 	}
 	li:hover > .menu { display: block; }
 
-	.menuHome > a { background-image: url(../images/icons/home.png); }
-	.menuHome:hover > a { background-image: url(../images/icons/facebook.png); }
-	.menuAbout > a { background-image: url(../images/icons/win.png); }
-	.menuAbout:hover > a { background-image: url(../images/icons/facebook.png); }
-	.menuEvents > span { background-image: url(../images/icons/events.png); }
-	.menuEvents:hover > span { background-image: url(../images/icons/facebook.png); }
-	.menuMembers > a { background-image: url(../images/icons/members.png); }
-	.menuMembers:hover > a { background-image: url(../images/icons/facebook.png); }
-	.menuGalleries > a { background-image: url(../images/icons/galleries.png); }
-	.menuGalleries:hover > a { background-image: url(../images/icons/facebook.png); }
-	.menuFacebook > a { background-image: url(../images/icons/facebook.png); }
-	.menuFacebook:hover > a { background-image: url(../images/icons/facebook.png); }
+
+	@each $menu in home, about, events, members, galleries, facebook {
+		.menu-#{$menu} {
+			> a, > span { background-image: url(../images/icons/#{$menu}.png); }
+			&:hover {
+				> a, > span { background-image: url(../images/icons/#{$menu}-over.png); }
+			}
+			> a.active, > span.active,
+			> a.active-trail, > span.active-trail { background-image: url(../images/icons/#{$menu}-over.png); }
+		}
+	}
 }
