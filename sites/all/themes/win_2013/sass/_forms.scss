@@ -1,3 +1,63 @@
+@import "variables";
+@import "mixins";
+
+fieldset {
+	border: 1px solid $grey;
+}
+
 input {
 	max-width: 100%;
+}
+
+input[type="text"], input[type="password"], input[type="email"],
+textarea {
+	padding: 0.25em 0.5em;
+
+	background: white;
+	border: 1px solid $grey;
+	outline: none;
+	border-radius: 0.25em;
+
+	&:active, &:focus {
+		box-shadow: 0 0 4px $pink-hot;
+		border: 1px solid $pink-hot;
+	}
+
+	.block & {
+		width: 100%;
+	}
+}
+
+input[type="submit"], input[type="reset"],
+button {
+	float: right;
+	margin-left: 0.75em;
+	padding: 0.25em 1em;
+
+	color: white;
+	background: $pink-hot;
+	border: none;
+	border-radius: 0.25em;
+
+	&:hover {
+		background: $pink-medium;
+	}
+}
+
+.filter-wrapper {
+	display: none;
+}
+
+
+.form-item, .form-actions {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.form-actions {
+	@include clearfix;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+	margin-top: 0;
 }
