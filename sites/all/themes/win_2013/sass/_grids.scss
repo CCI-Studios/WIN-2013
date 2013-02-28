@@ -11,7 +11,7 @@ $grid-padding: 2em;
 	padding-left: $grid-padding;
 	float: left;
 
-	@media screen and (max-width: 700px) {
+	@include breakpoint(baby-bear) {
 		float: none;
 	}
 }
@@ -20,8 +20,7 @@ $grid-padding: 2em;
 	@for $j from 1 through $i {
 		.col-#{$j}-#{$i} {
 			width: $j/$i *100%;
-
-			@media screen and (max-width: 700px) {
+			@include breakpoint(baby-bear) {
 				width: 100%;
 			}
 		}

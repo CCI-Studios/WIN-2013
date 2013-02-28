@@ -11,6 +11,10 @@ ul.menu { // added tag, thanks drupal
 		position: relative;
 		float: left;
 		margin: 0 0 0 1em;
+
+		@include breakpoint(baby-bear) {
+			float: none;
+		}
 	}
 
 	a, span {
@@ -39,6 +43,7 @@ ul.menu { // added tag, thanks drupal
 		left: 50%;
 		margin-left: -7em;
 		width: 14em;
+		z-index: 15;
 
 		background: white;
 		border-radius: 0.5em;

@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .block {
 	position: relative;
@@ -46,6 +47,12 @@
 	right: 0;
 
 	z-index: 10;
+
+	@include clearfix;
+
+	@include breakpoint(baby-bear) {
+		position: static;
+	}
 }
 
 #block-views-next-win-event-block {
@@ -64,4 +71,11 @@
 
 	.host { color: $pink-medium; }
 	.views-field-body { clear: both; }
+}
+
+#block-logo-block-logo {
+	@include breakpoint(baby-bear) {
+		padding-bottom: 1em;
+		text-align: center;
+	}
 }
