@@ -12,7 +12,7 @@ ul.menu { // added tag, thanks drupal
 		float: left;
 		margin: 0 0 0 1em;
 
-		@include breakpoint(baby-bear) {
+		@include breakpoint(mama-bear) {
 			float: none;
 		}
 	}

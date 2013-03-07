@@ -1,0 +1,1 @@
+jQuery(window).load(function(){var e=jQuery(".views_slideshow_cycle_main");jQuery(window).resize(function(){e.each(function(){var e=jQuery(this),t=e.find("img").height();if(t!==0){console.log(t);return!1}})})});

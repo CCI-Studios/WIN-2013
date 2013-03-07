@@ -1,5 +1,5 @@
 @import "mixins";
-$grid-padding: 2em;
+$grid-padding: 1em;
 
 .grid-container {
 	margin-left: -$grid-padding;
@@ -20,6 +20,7 @@ $grid-padding: 2em;
 	@for $j from 1 through $i {
 		.col-#{$j}-#{$i} {
 			width: $j/$i *100%;
+
 			@include breakpoint(baby-bear) {
 				width: 100%;
 			}

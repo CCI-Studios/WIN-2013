@@ -16,9 +16,9 @@
 		@media (max-width: 1600px) { @content; }
 	}
 	@else if $point == mama-bear {
-		@media (max-width: 1250px) { @content; }
+		@media (max-width: 800px) { @content; }
 	}
 	@else if $point == baby-bear {
-		@media (max-width: 800px) { @content; }
+		@media (max-width: 450px) { @content; }
 	}
 }

@@ -51,7 +51,6 @@ function win_2013_form_alter(&$form, &$form_state, $form_id) {
 	}
 }
 
-
 function win_2013_preprocess_user_login_block(&$vars) {
 	$vars['form']['links'] = null; // kill links
 

@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .global-container {
 	position: relative;
@@ -33,19 +34,29 @@
 	margin-bottom: 1em;
 }
 
-[role="main"] {
-	margin: 0 0 1em;
-	padding: 1em;
-
-	border-radius: 0.5em;
-	background: #fff;
-	box-shadow: 0 0 4px $shadow;
+#content {
+	@include breakpoint(mama-bear) {
+		width: 100%;
+	}
 }
 
-.sidebars {
-	@include breakpoint(baby-bear) {
+#sidebar {
+
+	@include breakpoint(mama-bear) {
+		width: 100%;
 		margin-top: 1em;
 	}
+
+	//@include breakpoint(baby-bear) {
+	// 	margin-left: -1em;
+
+	// 	.block {
+	// 		float: left;
+	// 		width: 50%;
+	// 		margin: 0 0 1em;
+	// 		padding-left: 1em;
+	// 	}
+	//}
 }
 
 .region-bottom {

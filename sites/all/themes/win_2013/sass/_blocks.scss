@@ -32,7 +32,7 @@
 	}
 }
 
-.styled-container {
+.styled-container > .skin {
 	padding: 1em;
 
 	border-radius: 0.5em;
@@ -48,10 +48,9 @@
 	right: 0;
 
 	z-index: 10;
-
 	@include clearfix;
 
-	@include breakpoint(baby-bear) {
+	@include breakpoint(mama-bear) {
 		position: static;
 	}
 }
@@ -75,7 +74,7 @@
 }
 
 #block-logo-block-logo {
-	@include breakpoint(baby-bear) {
+	@include breakpoint(mama-bear) {
 		padding-bottom: 1em;
 		text-align: center;
 	}

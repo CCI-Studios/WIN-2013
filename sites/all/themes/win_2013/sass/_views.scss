@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+.view-members {
+	.views-row {
+		border-top: 1px solid $grey;
+		padding: 0.5em 0;
+
+		&:first-child { border-top: none; }
+	}
+}
+
+.view-galleries {
+	margin-left: -1em;
+
+	@include clearfix();
+
+	.views-row {
+		float: left;
+		width: 25%;
+		padding-left: 1em;
+
+		text-align: center;
+
+		&:nth-child(4n - 3) { clear: left; }
+	}
+}

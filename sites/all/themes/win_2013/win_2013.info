@@ -2,6 +2,7 @@ name = WIN 2013
 description = Win theme by CCI Studios
 core = 7.x
 
+scripts[] = js/scripts.js
 stylesheets[all][] = css/theme.css
 
 regions[header] = Header

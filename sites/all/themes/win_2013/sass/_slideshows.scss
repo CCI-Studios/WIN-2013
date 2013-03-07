@@ -6,13 +6,24 @@
 	margin-right: 75px;
 	padding: 3px;
 
+	overflow: hidden;
 	background: white;
 	box-shadow: 0 0 4px $shadow;
 	border-radius: 8px;
 
+	.views-slideshow-cycle-main-frame {
+		max-width: 100%;
+		overflow: hidden;
+		border-radius: 6px;
+	}
+
 	img {
 		display: block;
 		border-radius: 6px;
+
+		width: auto;
+		max-width: none; // allow overflow
+		height: auto;
 	}
 }
 

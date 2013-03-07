@@ -85,8 +85,8 @@ $sidebar_bottom = render($page['sidebar_second']);
 	<?php print render($page['highlighted']) ?>
 
 	<div class="grid-container">
-		<div class="col-7-10">
-			<div id="content" role="main">
+		<div id="content" class="col-7-10 styled-container">
+			<div class="skin" role="main">
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
 				<?php if ($title): ?>
@@ -107,7 +107,7 @@ $sidebar_bottom = render($page['sidebar_second']);
 		</div>
 
 		<?php if ($sidebar_top || $sidebar_bottom): ?>
-			<aside class="col-3-10 sidebars">
+			<aside id="sidebar" class="col-3-10 sidebars">
 				<?php print render($page['sidebar_first']) ?>
 				<?php print render($page['sidebar_second']) ?>
 			</aside>

@@ -1,0 +1,13 @@
+@import "mixins";
+
+.field-name-field-images {
+	margin: 1em 0 1em -1em;
+
+	.field-item {
+		float: left;
+		width: 25%;
+		padding-left: 1em;
+
+		&:nth-child(4n - 3) { clear: left; }
+	}
+}
