@@ -1,6 +1,6 @@
 @import "variables";
 
-ul.menu { // added tag, thanks drupal
+.menuHorizontal ul.menu { // added tag, thanks drupal
 	margin: 0;
 	padding: 0;
 
@@ -90,5 +90,22 @@ ul.menu { // added tag, thanks drupal
 			> a.active, > span.active,
 			> a.active-trail, > span.active-trail { background-image: url(../images/icons/#{$menu}-over.png); }
 		}
+	}
+}
+
+.menuVertical ul.menu {
+	margin: 0;
+	padding: 0;
+
+
+
+	li {
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+	a, span {
+		display: block;
 	}
 }

@@ -27,25 +27,12 @@ function win_2013_form_alter(&$form, &$form_state, $form_id) {
 	$containers = array('container', 'fieldset');
 	$fields = array('textfield', 'password');
 
-	// add placeholders everywhere
-	// foreach($form as $field => $values) {
-	// 	if (is_array($values) && isset($values['#type']) &&
-	// 	 in_array($values['#type'], $fields) && isset($values['#title'])) {
-	// 		$form[$field]['#attributes']['placeholder'] = $values['#title'];
-	// 		$form[$field]['#title'] = null;
-	// 	}
-	// }
-
 	// redirect after register
 	if ($form_id == 'user_register_form') {
 		$form_state['redirect'] = 'node/add/member';
 	}
 
 	if ($form_id == 'member_node_form') {
-		// var_dump("<pre>");
-		// var_dump($form['field_google_maps_link']['und'][0]['title']);
-		// var_dump("</pre>");
-
 		$form['field_google_maps_link']['und'][0]['title']['#type'] = 'hidden';
 		$form['field_google_maps_link']['und'][0]['title']['#default_value'] = 'Google Maps';
 	}
@@ -58,4 +45,23 @@ function win_2013_preprocess_user_login_block(&$vars) {
 	$vars['pass'] = render($vars['form']['pass']);
 	$vars['submit'] = render($vars['form']['actions']['submit']);
 	$vars['rendered'] = drupal_render_children($vars['form']);
+}
+
+function win_2013_preprocess_node(&$vars) {
+
+	if (!path_is_admin($_GET['q'])) {
+		if (isset($vars['content']['field_date']) && isset($vars['content']['field_registration_form'])) {
+			$date = $vars['content']['field_date']['#items'][0]['value'];
+			$now = time();
+			$week = strtotime('1 week');
+
+			if ($date < $now || $date > $week) {
+				unset($vars['content']['field_registration_form']);
+			}
+		}
+
+		if (isset($vars['content']['field_presenter'])) {
+			unset($vars['content']['field_presenter_form']);
+		}
+	}
 }

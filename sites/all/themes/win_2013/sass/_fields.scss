@@ -2,7 +2,8 @@
 	margin: 1em 0;
 }
 
-.field-name-field-logo {
+// only position when viewing, not editing
+.node .field-name-field-logo {
 	position: absolute;
 	top: -4em;
 	right: 0;
