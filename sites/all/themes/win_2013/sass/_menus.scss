@@ -1,5 +1,6 @@
 @import "variables";
 
+
 .menuHorizontal ul.menu { // added tag, thanks drupal
 	margin: 0;
 	padding: 0;
@@ -48,6 +49,10 @@
 		background: white;
 		border-radius: 0.5em;
 		box-shadow: 0 0 10px $shadow;
+
+		.no-boxshadow & {
+			border: 1px solid #ccc;
+		}
 
 		&:after {
 			content: ' ';

@@ -38,6 +38,10 @@
 	border-radius: 0.5em;
 	box-shadow: 0 0 4px $shadow;
 	background: white;
+
+	.no-boxshadow & {
+		border: 1px solid #ccc;
+	}
 }
 
 
