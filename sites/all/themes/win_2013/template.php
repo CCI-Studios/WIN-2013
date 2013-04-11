@@ -53,7 +53,7 @@ function win_2013_preprocess_node(&$vars) {
 		if (isset($vars['content']['field_date']) && isset($vars['content']['field_registration_form'])) {
 			$date = $vars['content']['field_date']['#items'][0]['value'];
 			$now = time();
-			$week = strtotime('1 week');
+			$week = strtotime('2 week');
 
 			if ($date < $now || $date > $week) {
 				unset($vars['content']['field_registration_form']);
